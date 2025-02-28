@@ -1,0 +1,90 @@
+/* Global page styles */
+.page-container {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #fefefe 0%, #e0e0e0 100%);
+  padding: 0;
+  margin: 0;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #fff, #333);
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+  /* Hybrid style: bright text with a dark overlay */
+  background-blend-mode: overlay;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.slogan {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.blurb {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Products Section */
+.products {
+  padding: 3rem 2rem;
+  background: #fff;
+}
+
+.product {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.product h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1rem;
+}
+
+.footer a {
+  color: #f0a500;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
