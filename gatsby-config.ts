@@ -1,4 +1,8 @@
 import type { GatsbyConfig } from "gatsby";
+import dotenv from "dotenv";
+
+// Load environment variables from .env file
+dotenv.config();
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -16,7 +20,7 @@ const config: GatsbyConfig = {
       options: {
         // You need to specify at least one tracking ID here
         trackingIds: [
-          "GA-TRACKING-ID", // Replace with your Google Analytics tracking ID
+          process.env.GATSBY_FIREBASE_MEASUREMENT_ID || "GA-TRACKING-ID", // Use the measurement ID from env vars
         ],
         // This object is used for configuration specific to this plugin
         pluginConfig: {

@@ -19,15 +19,30 @@ const StashdogPage: React.FC = () => {
     }
   }, [isInitialized, logEvent]);
 
-  // Log click events
+  // Enhanced tracking for feature clicks
   const handleFeatureClick = (featureName: string) => {
+    logEvent('feature_click', {
+      feature_name: featureName,
+      page: 'stashdog'
+    });
+    
+    // Also log as select_content for backward compatibility
     logEvent('select_content', {
       content_type: 'feature',
       content_id: featureName
     });
   };
 
-  const handleCTAClick = (ctaType: string) => {
+  // Enhanced tracking for CTA button clicks
+  const handleCTAClick = (ctaType: string, buttonText: string, buttonPosition: string) => {
+    logEvent('cta_click', {
+      cta_type: ctaType,
+      button_text: buttonText,
+      button_position: buttonPosition,
+      page: 'stashdog'
+    });
+    
+    // Also log as generate_lead for backward compatibility
     logEvent('generate_lead', {
       cta_type: ctaType
     });
@@ -86,7 +101,13 @@ const StashdogPage: React.FC = () => {
               />
             </div>
             <div style={{ margin: '2rem 0' }}>
-              <a href="#" className="cta-button">Get Started Today</a>
+              <a 
+                href="#" 
+                className="cta-button"
+                onClick={() => handleCTAClick('primary', 'Get Started Today', 'hero')}
+              >
+                Get Started Today
+              </a>
             </div>
           </div>
         </section>
@@ -106,7 +127,16 @@ const StashdogPage: React.FC = () => {
                 and real-time backups to ensure your data is always protected. Trust your digital 
                 assets with a service that treats them like family.
               </p>
-              <a href="#" className="cta-button">Secure Your Assets Now</a>
+              <a 
+                href="#" 
+                className="cta-button"
+                onClick={() => {
+                  handleFeatureClick('security');
+                  handleCTAClick('security', 'Secure Your Assets Now', 'feature_section');
+                }}
+              >
+                Secure Your Assets Now
+              </a>
             </div>
 
             {/* Convenience Section */}
@@ -121,7 +151,16 @@ const StashdogPage: React.FC = () => {
                 and powerful search tools, organizing and accessing your files has never been easier. 
                 Focus on what truly matters—let us handle the clutter.
               </p>
-              <a href="#" className="cta-button">Experience Effortless Organization</a>
+              <a 
+                href="#" 
+                className="cta-button"
+                onClick={() => {
+                  handleFeatureClick('organization');
+                  handleCTAClick('organization', 'Experience Effortless Organization', 'feature_section');
+                }}
+              >
+                Experience Effortless Organization
+              </a>
             </div>
 
             {/* Innovation Section */}
@@ -136,7 +175,16 @@ const StashdogPage: React.FC = () => {
                 state-of-the-art security with smart automation to give you a seamless, innovative 
                 experience. Join the digital revolution today.
               </p>
-              <a href="#" className="cta-button">Join the Innovation</a>
+              <a 
+                href="#" 
+                className="cta-button"
+                onClick={() => {
+                  handleFeatureClick('innovation');
+                  handleCTAClick('innovation', 'Join the Innovation', 'feature_section');
+                }}
+              >
+                Join the Innovation
+              </a>
             </div>
 
             {/* Community Section */}
@@ -151,7 +199,16 @@ const StashdogPage: React.FC = () => {
                 peace of mind that comes with using StashDog. Experience a community built on trust, 
                 reliability, and innovation—where every file is treated like a treasure.
               </p>
-              <a href="#" className="cta-button">Join the Pack Today</a>
+              <a 
+                href="#" 
+                className="cta-button"
+                onClick={() => {
+                  handleFeatureClick('community');
+                  handleCTAClick('community', 'Join the Pack Today', 'feature_section');
+                }}
+              >
+                Join the Pack Today
+              </a>
             </div>
 
             {/* Features Section */}
@@ -217,12 +274,35 @@ const StashdogPage: React.FC = () => {
             <div style={{ margin: '3rem 0', textAlign: 'center' }}>
               <h2>Ready to Secure Your Digital World?</h2>
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', margin: '2rem 0' }}>
-                <a href="#" className="cta-button">Start Your Free Trial</a>
-                <a href="#" className="cta-button">Request a Demo</a>
-                <a href="#" className="cta-button">Discover Our Plans</a>
+                <a 
+                  href="#" 
+                  className="cta-button"
+                  onClick={() => handleCTAClick('trial', 'Start Your Free Trial', 'footer_cta')}
+                >
+                  Start Your Free Trial
+                </a>
+                <a 
+                  href="#" 
+                  className="cta-button"
+                  onClick={() => handleCTAClick('demo', 'Request a Demo', 'footer_cta')}
+                >
+                  Request a Demo
+                </a>
+                <a 
+                  href="#" 
+                  className="cta-button"
+                  onClick={() => handleCTAClick('plans', 'Discover Our Plans', 'footer_cta')}
+                >
+                  Discover Our Plans
+                </a>
               </div>
               <div style={{ margin: '2rem 0' }}>
-                <Link to="/" className="cta-button" style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}>
+                <Link 
+                  to="/" 
+                  className="cta-button" 
+                  style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}
+                  onClick={() => logEvent('navigation', { destination: 'home', source: 'stashdog' })}
+                >
                   Back to Home
                 </Link>
               </div>
@@ -235,7 +315,12 @@ const StashdogPage: React.FC = () => {
           <div className="container">
             <p>
               Contact us at:{" "}
-              <a href="mailto:mail@dogfoodlab.io">mail@dogfoodlab.io</a>
+              <a 
+                href="mailto:mail@dogfoodlab.io"
+                onClick={() => logEvent('contact_click', { page: 'stashdog' })}
+              >
+                mail@dogfoodlab.io
+              </a>
             </p>
             <p>
               &copy; {new Date().getFullYear()} Dogfood Lab LLC. All rights

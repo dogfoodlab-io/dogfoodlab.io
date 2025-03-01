@@ -31,8 +31,16 @@ const IndexPage: React.FC = () => {
     }
   }, [isInitialized, logEvent, getConfigValue, getConfigBoolean]);
 
-  // Log click events
-  const handleProductClick = (productName: string) => {
+  // Enhanced tracking for CTA button clicks
+  const handleCTAClick = (productName: string, buttonText: string, buttonPosition: string) => {
+    logEvent('cta_click', {
+      product_name: productName,
+      button_text: buttonText,
+      button_position: buttonPosition,
+      page: 'home'
+    });
+    
+    // Also log as select_content for backward compatibility
     logEvent('select_content', {
       content_type: 'product',
       content_id: productName
@@ -117,7 +125,7 @@ const IndexPage: React.FC = () => {
                 href="/stashdog" 
                 className="cta-button"
                 style={{ backgroundColor: buttonColor }}
-                onClick={() => handleProductClick('stashdog')}
+                onClick={() => handleCTAClick('stashdog', 'Learn More', 'product_card')}
               >
                 Learn More
               </a>
@@ -144,7 +152,11 @@ const IndexPage: React.FC = () => {
                 favorite movies and TV shows, turning every scene and moment
                 into a shared, timeless experience.
               </p>
-              <a href="#" className="cta-button disabled" onClick={() => handleProductClick('watchdog')}>
+              <a 
+                href="#" 
+                className="cta-button disabled" 
+                onClick={() => handleCTAClick('watchdog', 'Under Construction', 'product_card')}
+              >
                 Under Construction 🚧
               </a>
             </div>
@@ -168,7 +180,12 @@ const IndexPage: React.FC = () => {
                 <p className="description">
                   We're working on something exciting that will change how you interact with your digital world.
                 </p>
-                <a href="#" className="cta-button" style={{ backgroundColor: buttonColor }} onClick={() => handleProductClick('new_product')}>
+                <a 
+                  href="#" 
+                  className="cta-button" 
+                  style={{ backgroundColor: buttonColor }} 
+                  onClick={() => handleCTAClick('new_product', 'Get Notified', 'product_card')}
+                >
                   Get Notified
                 </a>
               </div>
@@ -193,7 +210,12 @@ const IndexPage: React.FC = () => {
                 space with high-end smart features, making luxury accessible and
                 practical.
               </p>
-              <a href="#" className="cta-button" style={{ backgroundColor: buttonColor }} onClick={() => handleProductClick('housedog')}>
+              <a 
+                href="#" 
+                className="cta-button" 
+                style={{ backgroundColor: buttonColor }} 
+                onClick={() => handleCTAClick('housedog', 'Learn More', 'product_card')}
+              >
                 Learn More
               </a>
             </div>
@@ -216,7 +238,12 @@ const IndexPage: React.FC = () => {
                 A social app built for spontaneous, short encounters—perfect for
                 those moments when you need a quick break or a burst of fun.
               </p>
-              <a href="#" className="cta-button" style={{ backgroundColor: buttonColor }} onClick={() => handleProductClick('10_minute_hang')}>
+              <a 
+                href="#" 
+                className="cta-button" 
+                style={{ backgroundColor: buttonColor }} 
+                onClick={() => handleCTAClick('10_minute_hang', 'Learn More', 'product_card')}
+              >
                 Learn More
               </a>
             </div>
@@ -228,7 +255,12 @@ const IndexPage: React.FC = () => {
           <div className="container">
             <p>
               Contact us at:{" "}
-              <a href="mailto:mail@dogfoodlab.io" onClick={() => logEvent('contact_click')}>mail@dogfoodlab.io</a>
+              <a 
+                href="mailto:mail@dogfoodlab.io" 
+                onClick={() => logEvent('contact_click', { page: 'home' })}
+              >
+                mail@dogfoodlab.io
+              </a>
             </p>
             <p>
               &copy; {new Date().getFullYear()} Dogfood Lab LLC. All rights
