@@ -10,6 +10,7 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
+    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -52,6 +53,14 @@ const config: GatsbyConfig = {
         "path": "./src/pages/"
       },
       __key: "pages"
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "static",
+        "path": "./static/"
+      },
+      __key: "static"
     }
   ]
 };
