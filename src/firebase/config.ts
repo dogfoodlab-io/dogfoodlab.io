@@ -1,5 +1,5 @@
 // Firebase configuration
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyATE07DXXHRSm2l6UomEhZQBo_882x0lnw",
   authDomain: "dogfoodlab.firebaseapp.com",
   projectId: "dogfoodlab",
