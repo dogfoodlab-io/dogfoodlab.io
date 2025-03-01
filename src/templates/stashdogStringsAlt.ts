@@ -74,6 +74,17 @@ export const stashdogStringsAlt = {
       {
         text: 'Our family home has never been more organized. StashDog has been a game-changer for our busy household.',
         author: 'The Martinez Family',
+        image: "Face-Black.webp"
+      },
+      {
+        text: 'As someone who was always disorganized, StashDog has helped me create systems that actually work for my lifestyle.',
+        author: 'Mike T.',
+        image: "Face-Young-Man.webp"
+      },
+      {
+        text: 'The interface is so intuitive that even seniors like me can use it without any trouble. Highly recommended!',
+        author: 'Eleanor R.',
+        image: "Face-Old-Woman.webp"
       },
     ],
   },

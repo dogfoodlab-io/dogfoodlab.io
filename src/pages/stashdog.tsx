@@ -87,18 +87,18 @@ const StashdogPage: React.FC = () => {
         </header>
 
         {/* Hero Section */}
-        <section className="hero">
+        <section className="stashdog-hero">
           <div className="container">
-            <h2>{activeStashdogStrings.welcome.title}</h2>
-            <p>{activeStashdogStrings.welcome.description}</p>
-            <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', margin: '0rem 2rem'}}>
               <img
                 src="/dog1.png"
                 alt="StashDog"
-                style={{ maxWidth: '300px', height: 'auto' }}
+                style={{ maxWidth: '200px', height: 'auto' }}
               />
             </div>
-            <div style={{ margin: '2rem 0' }}>
+            <h2>{activeStashdogStrings.welcome.title}</h2>
+            <p>{activeStashdogStrings.welcome.description}</p>
+            {/* <div style={{ margin: '2rem 0' }}>
               <a 
                 href="#" 
                 className="cta-button"
@@ -106,7 +106,7 @@ const StashdogPage: React.FC = () => {
               >
                 {activeStashdogStrings.get_started.call_to_action.sign_up}
               </a>
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -204,33 +204,72 @@ const StashdogPage: React.FC = () => {
             </div>
 
             {/* Why Choose Section */}
-            <div className="product" style={{ maxWidth: '800px', margin: '2rem auto' }}>
+            {/* <div className="product" style={{ maxWidth: '800px', margin: '2rem auto' }}>
               <h2>{activeStashdogStrings.why_choose.title}</h2>
               <ul style={{ textAlign: 'left', marginBottom: '2rem', fontSize: '1.1rem', lineHeight: '1.8' }}>
                 {activeStashdogStrings.why_choose.benefits.map((benefit, index) => (
                   <li key={index}><strong>{benefit.title}:</strong> {benefit.description}</li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
             {/* Testimonials Section */}
-            <h2>{activeStashdogStrings.testimonials.title}</h2>
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem', margin: '2rem 0' }}>
-              {activeStashdogStrings.testimonials.reviews.map((review, index) => (
-                <div key={index} style={{ 
-                  flex: '1 1 300px', 
-                  maxWidth: '400px', 
-                  padding: '1.5rem', 
-                  borderRadius: '10px', 
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'
-                }}>
-                  <p style={{ fontStyle: 'italic', fontSize: '1.1rem' }}>
-                    "{review.text}"
-                  </p>
-                  <p style={{ textAlign: 'right', fontWeight: 'bold' }}>— {review.author}</p>
-                </div>
-              ))}
+            <div style={{ margin: '3rem 0', width: '100%', maxWidth: '100%' }}>
+              <h2 style={{ marginBottom: '2rem' }}>{activeStashdogStrings.testimonials.title}</h2>
+              <div style={{ 
+                display: 'flex', 
+                flexWrap: 'wrap', 
+                justifyContent: 'center', 
+                gap: '2rem', 
+                margin: '2rem 0',
+                width: '100%'
+              }}>
+                {activeStashdogStrings.testimonials.reviews.map((review, index) => (
+                  <div key={index} style={{ 
+                    flex: '1 1 300px', 
+                    maxWidth: '400px', 
+                    padding: '1.5rem', 
+                    borderRadius: '10px', 
+                    backgroundColor: '#333',
+                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+                  }}
+                  className="testimonial-card"
+                  >
+                    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
+                      <img 
+                        src={review.image ? `/${review.image}` : index === 0 ? "/Face-Young-Woman.webp" : "/Face-Black.webp"} 
+                        alt={`${review.author} portrait`}
+                        style={{ 
+                          width: '70px', 
+                          height: '70px', 
+                          borderRadius: '50%', 
+                          marginRight: '1rem',
+                          border: '3px solid #fcd900',
+                          boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)'
+                        }}
+                      />
+                      <p style={{ 
+                        fontWeight: 'bold', 
+                        fontSize: '1.1rem', 
+                        margin: 0,
+                        color: '#fcd900'
+                      }}>{review.author}</p>
+                    </div>
+                    <p style={{ 
+                      fontStyle: 'italic', 
+                      fontSize: '1.1rem',
+                      lineHeight: '1.6',
+                      flex: '1',
+                      color: 'white'
+                    }}>
+                      "{review.text}"
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* CTA Section */}
@@ -257,7 +296,7 @@ const StashdogPage: React.FC = () => {
                 <Link 
                   to="/" 
                   className="cta-button" 
-                  style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}
+                  style={{ backgroundColor: '#fcd900', color: '#333' }}
                   onClick={() => logEvent('navigation', { destination: 'home', source: 'stashdog' })}
                 >
                   Back to Home

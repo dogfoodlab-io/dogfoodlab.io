@@ -71,7 +71,17 @@ nav ul li {
   text-align: center;
 }
 
-.hero .container {
+/* StashDog Hero Section */
+.stashdog-hero {
+  background-image: url('/stashdog-hero.png');
+  background-size: cover;
+  background-position: center;
+  background-color: #fcd900;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero .container, .stashdog-hero .container {
   background-color: rgba(252, 217, 0, 0.8);
   padding: 20px;
   width: 50%;
@@ -203,6 +213,16 @@ nav ul li {
   text-decoration: underline;
 }
 
+/* Testimonial Cards */
+.testimonial-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
 /* Responsive adjustments */
 @media (min-width: 992px) {
   .products .container {
@@ -223,7 +243,7 @@ nav ul li {
 }
 
 @media (max-width: 767px) {
-  .hero .container {
+  .hero .container, .stashdog-hero .container {
     width: 80%;
   }
   
@@ -241,5 +261,10 @@ nav ul li {
     align-self: center;
     width: 100%;
     text-align: center;
+  }
+  
+  .testimonial-card {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
   }
 }

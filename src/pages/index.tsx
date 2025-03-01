@@ -115,10 +115,7 @@ const IndexPage: React.FC = () => {
                 </div>
               </div>
               <p className="description">
-                An organizational app designed to track personal
-                belongings—ideal for collectors, hobbyists, busy parents,
-                roommates, and small business owners who need a better way to
-                manage their things.
+              Keep track of all your stuff – whether it's prized collectibles or just random crap. Organize, manage, and share your items effortlessly.
               </p>
               {/* A/B test for button color */}
               <a 
@@ -148,17 +145,16 @@ const IndexPage: React.FC = () => {
                 </div>
               </div>
               <p className="description">
-                A social app that enables timeline-aligned comments on your
-                favorite movies and TV shows, turning every scene and moment
-                into a shared, timeless experience.
+              Turn every scene into a conversation – comment in sync on your favorite movies and TV shows, no matter when, where, or which of the 200 streaming services you're watching on.
               </p>
               <a 
                 href="#" 
                 className="cta-button disabled" 
-                onClick={() => handleCTAClick('watchdog', 'Under Construction', 'product_card')}
+                onClick={() => handleCTAClick('watchdog', 'Not Ready for Human Consumption', 'product_card')}
               >
-                Under Construction 🚧
+                Not Ready for Human Consumption 🚧
               </a>
+
             </div>
 
             {/* Feature flag for new UI */}
@@ -206,25 +202,23 @@ const IndexPage: React.FC = () => {
                 </div>
               </div>
               <p className="description">
-                An open platform for home automation that transforms your living
-                space with high-end smart features, making luxury accessible and
-                practical.
+              AI-enhaced tools to turn your sad, boring apartment that smells like BO and cat piss into a futuristic luxury smarthome that smells like BO and cat piss.
               </p>
               <a 
                 href="#" 
-                className="cta-button" 
+                className="cta-button disabled" 
                 style={{ backgroundColor: buttonColor }} 
-                onClick={() => handleCTAClick('housedog', 'Learn More', 'product_card')}
+                onClick={() => handleCTAClick('housedog', 'Not Ready for Human Consumption', 'product_card')}
               >
-                Learn More
+                Not Ready for Human Consumption 🚧
               </a>
             </div>
 
             <div className="product">
               <div className="product-header">
                 <div className="product-info">
-                  <h3>10-Minute Hang</h3>
-                  <p className="tagline">Quick, real connections on the go.</p>
+                  <h3>Supdog</h3>
+                  <p className="tagline">10-minute hangouts</p>
                 </div>
                 <div className="product-image-container">
                   <img
@@ -235,16 +229,15 @@ const IndexPage: React.FC = () => {
                 </div>
               </div>
               <p className="description">
-                A social app built for spontaneous, short encounters—perfect for
-                those moments when you need a quick break or a burst of fun.
+              Bored and out in a public place? Jump into a spontaneous 10-minute hang for a bit of on the fly socializing.
               </p>
               <a 
                 href="#" 
-                className="cta-button" 
+                className="cta-button disabled" 
                 style={{ backgroundColor: buttonColor }} 
-                onClick={() => handleCTAClick('10_minute_hang', 'Learn More', 'product_card')}
+                onClick={() => handleCTAClick('supdog', 'Not Ready for Human Consumption', 'product_card')}
               >
-                Learn More
+                Not Ready for Human Consumption 🚧
               </a>
             </div>
           </div>
