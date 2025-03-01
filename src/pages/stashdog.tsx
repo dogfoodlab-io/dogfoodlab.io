@@ -1,9 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Link } from "gatsby";
 import "./index.css";
+import { useFirebase } from "../firebase";
 
 const StashdogPage: React.FC = () => {
+  const { isInitialized, logEvent } = useFirebase();
+
+  // Log page view when component mounts
+  useEffect(() => {
+    if (isInitialized) {
+      // Log page view event
+      logEvent('page_view', {
+        page_title: 'Stashdog Page',
+        page_location: window.location.href,
+        page_path: window.location.pathname
+      });
+    }
+  }, [isInitialized, logEvent]);
+
+  // Log click events
+  const handleFeatureClick = (featureName: string) => {
+    logEvent('select_content', {
+      content_type: 'feature',
+      content_id: featureName
+    });
+  };
+
+  const handleCTAClick = (ctaType: string) => {
+    logEvent('generate_lead', {
+      cta_type: ctaType
+    });
+  };
+
   return (
     <HelmetProvider>
       <div className="page-container">
