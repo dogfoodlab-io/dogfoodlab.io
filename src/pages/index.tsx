@@ -46,9 +46,6 @@ const IndexPage: React.FC = () => {
               what truly matters— creating moments of magic in a world full of
               distractions.
             </p>
-            <a href="#products" className="cta-button">
-              Learn More
-            </a>
           </div>
         </section>
 
@@ -88,7 +85,7 @@ const IndexPage: React.FC = () => {
                 <div className="product-info">
                   <h3>Watchdog</h3>
                   <p className="tagline">
-                    Watch, comment, and relive the magic.
+                    Watch, comment, and relive the fun.
                   </p>
                 </div>
                 <div className="product-image-container">
@@ -104,8 +101,8 @@ const IndexPage: React.FC = () => {
                 favorite movies and TV shows, turning every scene and moment
                 into a shared, timeless experience.
               </p>
-              <a href="#" className="cta-button">
-                Learn More
+              <a href="#" className="cta-button disabled">
+                Under Construction 🚧
               </a>
             </div>
 
@@ -141,7 +138,7 @@ const IndexPage: React.FC = () => {
                 </div>
                 <div className="product-image-container">
                   <img
-                    src="/pup4.png"
+                    src="/pup7.png"
                     alt="10-Minute Hang"
                     className="product-image"
                   />

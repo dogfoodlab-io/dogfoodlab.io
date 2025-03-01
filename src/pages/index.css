@@ -94,6 +94,12 @@ nav ul li {
   margin-top: 20px;
 }
 
+.cta-button.disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
 /* Products Section */
 .products {
   padding: 20px 0;
@@ -148,11 +154,12 @@ nav ul li {
 }
 
 .product img {
-  max-width: 150px;
+  background-color: #fcd900;
+  border: 6px solid;
+  max-width: 120px;
   height: auto;
-  border-radius: 0;
-  box-shadow: none;
-  transform: scaleX(-1);
+  border-radius: 64px;
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.5);
 }
 
 /* Description row */
