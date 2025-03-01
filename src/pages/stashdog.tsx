@@ -203,6 +203,50 @@ const StashdogPage: React.FC = () => {
               </a>
             </div>
 
+            {/* Family Sharing Section */}
+            <div className="product">
+              <div className="product-header">
+                <div className="product-info">
+                  <h3>{activeStashdogStrings.discover.features.family_sharing.title}</h3>
+                </div>
+              </div>
+              <p className="description">
+                {activeStashdogStrings.discover.features.family_sharing.description}
+              </p>
+              <a 
+                href="#" 
+                className="cta-button"
+                onClick={() => {
+                  handleFeatureClick('family_sharing');
+                  handleCTAClick('family_sharing', activeStashdogStrings.get_started.call_to_action.learn_more, 'feature_section');
+                }}
+              >
+                {activeStashdogStrings.get_started.call_to_action.learn_more}
+              </a>
+            </div>
+
+            {/* Smart Assistant Section */}
+            <div className="product">
+              <div className="product-header">
+                <div className="product-info">
+                  <h3>{activeStashdogStrings.discover.features.smart_assistant.title}</h3>
+                </div>
+              </div>
+              <p className="description">
+                {activeStashdogStrings.discover.features.smart_assistant.description}
+              </p>
+              <a 
+                href="#" 
+                className="cta-button"
+                onClick={() => {
+                  handleFeatureClick('smart_assistant');
+                  handleCTAClick('smart_assistant', activeStashdogStrings.get_started.call_to_action.learn_more, 'feature_section');
+                }}
+              >
+                {activeStashdogStrings.get_started.call_to_action.learn_more}
+              </a>
+            </div>
+
             {/* Why Choose Section */}
             {/* <div className="product" style={{ maxWidth: '800px', margin: '2rem auto' }}>
               <h2>{activeStashdogStrings.why_choose.title}</h2>

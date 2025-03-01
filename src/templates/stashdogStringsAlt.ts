@@ -32,6 +32,16 @@ export const stashdogStringsAlt = {
         description:
           'Set timely reminders for important items and tasks. StashDog helps you stay on top of maintenance, expiration dates, and more.'
       },
+      family_sharing: {
+        title: 'Family Collaboration',
+        description:
+          'Share your inventory with family members to collaborate on home organization. Keep everyone informed about where items are stored and manage household belongings together.'
+      },
+      smart_assistant: {
+        title: 'Voice-Enabled Organization',
+        description:
+          'Seamlessly integrates with Alexa and Google Home, allowing you to access your inventory information through simple voice commands.'
+      },
     },
   },
   why_choose: {
