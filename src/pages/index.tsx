@@ -75,7 +75,7 @@ const IndexPage: React.FC = () => {
                 roommates, and small business owners who need a better way to
                 manage their things.
               </p>
-              <a href="#" className="cta-button">
+              <a href="/stashdog" className="cta-button">
                 Learn More
               </a>
             </div>
