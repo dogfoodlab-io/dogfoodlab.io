@@ -26,7 +26,7 @@ export const initFirebase = async () => {
       
       // Set default values for remote config (for A/B testing)
       remoteConfig.defaultConfig = {
-        'welcome_message': 'Welcome to DogFood Lab!',
+        'welcome_message': 'Less time doing bullshit, more time making magic',
         'button_color': '#4285F4',
         'feature_flag_new_ui': false,
       };
