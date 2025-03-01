@@ -101,15 +101,15 @@ const IndexPage: React.FC = () => {
             <div className="product">
               <div className="product-header">
                 <div className="product-info">
-                  <h3>Stashdog</h3>
+                  <h3>StashDog</h3>
                   <p className="tagline">
-                    Keep your 💩 together, no matter how chaotic life gets.
+                    Quit living like a trash gremlin. Get your shit together.
                   </p>
                 </div>
                 <div className="product-image-container">
                   <img
                     src="/dog1.png"
-                    alt="Stashdog"
+                    alt="StashDog"
                     className="product-image"
                   />
                 </div>

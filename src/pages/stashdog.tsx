@@ -3,6 +3,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Link } from "gatsby";
 import "./index.css";
 import { useFirebase } from "../firebase";
+import { activeStashdogStrings } from "../templates/config";
 
 const StashdogPage: React.FC = () => {
   const { isInitialized, logEvent } = useFirebase();
@@ -12,7 +13,7 @@ const StashdogPage: React.FC = () => {
     if (isInitialized) {
       // Log page view event
       logEvent('page_view', {
-        page_title: 'Stashdog Page',
+        page_title: 'StashDog Page',
         page_location: window.location.href,
         page_path: window.location.pathname
       });
@@ -62,7 +63,7 @@ const StashdogPage: React.FC = () => {
             href="https://fonts.googleapis.com/css2?family=Chewy&family=Gabarito:wght@400..900&display=swap"
             rel="stylesheet"
           ></link>
-          <title>Stashdog - Dogfood Lab LLC</title>
+          <title>StashDog - Dogfood Lab LLC</title>
         </Helmet>
 
         {/* Header Section */}
@@ -88,15 +89,12 @@ const StashdogPage: React.FC = () => {
         {/* Hero Section */}
         <section className="hero">
           <div className="container">
-            <h2>Say hello to Stashdog – Your Ultimate Digital Guardian!</h2>
-            <p>
-              Secure, organize, and retrieve your valuable files and assets with unmatched ease. 
-              Protect your digital treasures with cutting-edge security and a user-friendly interface.
-            </p>
+            <h2>{activeStashdogStrings.welcome.title}</h2>
+            <p>{activeStashdogStrings.welcome.description}</p>
             <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
               <img
                 src="/dog1.png"
-                alt="Stashdog"
+                alt="StashDog"
                 style={{ maxWidth: '300px', height: 'auto' }}
               />
             </div>
@@ -104,9 +102,9 @@ const StashdogPage: React.FC = () => {
               <a 
                 href="#" 
                 className="cta-button"
-                onClick={() => handleCTAClick('primary', 'Get Started Today', 'hero')}
+                onClick={() => handleCTAClick('primary', activeStashdogStrings.get_started.call_to_action.sign_up, 'hero')}
               >
-                Get Started Today
+                {activeStashdogStrings.get_started.call_to_action.sign_up}
               </a>
             </div>
           </div>
@@ -115,185 +113,144 @@ const StashdogPage: React.FC = () => {
         {/* Main Content Sections */}
         <section className="products">
           <div className="container">
-            {/* Security Section */}
+            <h2>{activeStashdogStrings.discover.title}</h2>
+            
+            {/* Inventory Management Section */}
             <div className="product">
               <div className="product-header">
                 <div className="product-info">
-                  <h3>Lock Down Your Digital Life with Ironclad Security</h3>
+                  <h3>{activeStashdogStrings.discover.features.inventory_management.title}</h3>
                 </div>
               </div>
               <p className="description">
-                Worried about data breaches or lost files? StashDog uses military-grade encryption 
-                and real-time backups to ensure your data is always protected. Trust your digital 
-                assets with a service that treats them like family.
+                {activeStashdogStrings.discover.features.inventory_management.description}
               </p>
               <a 
                 href="#" 
                 className="cta-button"
                 onClick={() => {
-                  handleFeatureClick('security');
-                  handleCTAClick('security', 'Secure Your Assets Now', 'feature_section');
+                  handleFeatureClick('inventory_management');
+                  handleCTAClick('inventory', activeStashdogStrings.get_started.call_to_action.learn_more, 'feature_section');
                 }}
               >
-                Secure Your Assets Now
+                {activeStashdogStrings.get_started.call_to_action.learn_more}
               </a>
             </div>
 
-            {/* Convenience Section */}
+            {/* Location Tracking Section */}
             <div className="product">
               <div className="product-header">
                 <div className="product-info">
-                  <h3>Streamline Your Digital World in a Snap</h3>
+                  <h3>{activeStashdogStrings.discover.features.location_tracking.title}</h3>
                 </div>
               </div>
               <p className="description">
-                Say goodbye to messy folders and endless scrolling. With StashDog's intuitive design 
-                and powerful search tools, organizing and accessing your files has never been easier. 
-                Focus on what truly matters—let us handle the clutter.
+                {activeStashdogStrings.discover.features.location_tracking.description}
               </p>
               <a 
                 href="#" 
                 className="cta-button"
                 onClick={() => {
-                  handleFeatureClick('organization');
-                  handleCTAClick('organization', 'Experience Effortless Organization', 'feature_section');
+                  handleFeatureClick('location_tracking');
+                  handleCTAClick('location', activeStashdogStrings.get_started.call_to_action.learn_more, 'feature_section');
                 }}
               >
-                Experience Effortless Organization
+                {activeStashdogStrings.get_started.call_to_action.learn_more}
               </a>
             </div>
 
-            {/* Innovation Section */}
+            {/* Retrieval Section */}
             <div className="product">
               <div className="product-header">
                 <div className="product-info">
-                  <h3>Step into the Future of Digital Management</h3>
+                  <h3>{activeStashdogStrings.discover.features.retrieval.title}</h3>
                 </div>
               </div>
               <p className="description">
-                Harness the power of next-generation technology with StashDog. Our platform combines 
-                state-of-the-art security with smart automation to give you a seamless, innovative 
-                experience. Join the digital revolution today.
+                {activeStashdogStrings.discover.features.retrieval.description}
               </p>
               <a 
                 href="#" 
                 className="cta-button"
                 onClick={() => {
-                  handleFeatureClick('innovation');
-                  handleCTAClick('innovation', 'Join the Innovation', 'feature_section');
+                  handleFeatureClick('retrieval');
+                  handleCTAClick('retrieval', activeStashdogStrings.get_started.call_to_action.learn_more, 'feature_section');
                 }}
               >
-                Join the Innovation
+                {activeStashdogStrings.get_started.call_to_action.learn_more}
               </a>
             </div>
 
-            {/* Community Section */}
+            {/* Categories Section */}
             <div className="product">
               <div className="product-header">
                 <div className="product-info">
-                  <h3>Join a Growing Pack of Satisfied Users</h3>
+                  <h3>{activeStashdogStrings.discover.features.categories.title}</h3>
                 </div>
               </div>
               <p className="description">
-                Thousands of professionals, creatives, and small business owners have discovered the 
-                peace of mind that comes with using StashDog. Experience a community built on trust, 
-                reliability, and innovation—where every file is treated like a treasure.
+                {activeStashdogStrings.discover.features.categories.description}
               </p>
               <a 
                 href="#" 
                 className="cta-button"
                 onClick={() => {
-                  handleFeatureClick('community');
-                  handleCTAClick('community', 'Join the Pack Today', 'feature_section');
+                  handleFeatureClick('categories');
+                  handleCTAClick('categories', activeStashdogStrings.get_started.call_to_action.learn_more, 'feature_section');
                 }}
               >
-                Join the Pack Today
+                {activeStashdogStrings.get_started.call_to_action.learn_more}
               </a>
             </div>
 
-            {/* Features Section */}
+            {/* Why Choose Section */}
             <div className="product" style={{ maxWidth: '800px', margin: '2rem auto' }}>
-              <h2>What Makes StashDog Stand Out?</h2>
+              <h2>{activeStashdogStrings.why_choose.title}</h2>
               <ul style={{ textAlign: 'left', marginBottom: '2rem', fontSize: '1.1rem', lineHeight: '1.8' }}>
-                <li><strong>Robust Security:</strong> Enjoy military-grade encryption and real-time automated backups to keep your files safe.</li>
-                <li><strong>User-Friendly Interface:</strong> Navigate effortlessly with a clean, intuitive design suitable for everyone.</li>
-                <li><strong>Cross-Platform Access:</strong> Access your files anytime, anywhere—from desktop to mobile.</li>
-                <li><strong>Lightning-Fast Search:</strong> Find your documents, photos, or projects in seconds with our advanced search functionality.</li>
-                <li><strong>Affordable Plans:</strong> Get premium security and convenience without breaking the bank.</li>
-                <li><strong>Seamless Integration:</strong> Easily sync with your favorite apps and tools for a unified digital experience.</li>
+                {activeStashdogStrings.why_choose.benefits.map((benefit, index) => (
+                  <li key={index}><strong>{benefit.title}:</strong> {benefit.description}</li>
+                ))}
               </ul>
             </div>
 
             {/* Testimonials Section */}
-            <h2>What Our Users Say</h2>
+            <h2>{activeStashdogStrings.testimonials.title}</h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem', margin: '2rem 0' }}>
-              <div style={{ 
-                flex: '1 1 300px', 
-                maxWidth: '400px', 
-                padding: '1.5rem', 
-                borderRadius: '10px', 
-                backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'
-              }}>
-                <p style={{ fontStyle: 'italic', fontSize: '1.1rem' }}>
-                  "StashDog has completely transformed the way I manage my digital assets. The security features give me peace of mind, and the interface is so intuitive!"
-                </p>
-                <p style={{ textAlign: 'right', fontWeight: 'bold' }}>— Alex R., Entrepreneur</p>
-              </div>
-              
-              <div style={{ 
-                flex: '1 1 300px', 
-                maxWidth: '400px', 
-                padding: '1.5rem', 
-                borderRadius: '10px', 
-                backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'
-              }}>
-                <p style={{ fontStyle: 'italic', fontSize: '1.1rem' }}>
-                  "I never thought organizing my files could be this effortless. StashDog's smart automation and lightning-fast search saved me hours every week."
-                </p>
-                <p style={{ textAlign: 'right', fontWeight: 'bold' }}>— Jamie L., Freelancer</p>
-              </div>
-              
-              <div style={{ 
-                flex: '1 1 300px', 
-                maxWidth: '400px', 
-                padding: '1.5rem', 
-                borderRadius: '10px', 
-                backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'
-              }}>
-                <p style={{ fontStyle: 'italic', fontSize: '1.1rem' }}>
-                  "Reliable, secure, and easy to use—StashDog is exactly what my business needed. I now focus on growth, not worrying about data loss."
-                </p>
-                <p style={{ textAlign: 'right', fontWeight: 'bold' }}>— Taylor M., Small Business Owner</p>
-              </div>
+              {activeStashdogStrings.testimonials.reviews.map((review, index) => (
+                <div key={index} style={{ 
+                  flex: '1 1 300px', 
+                  maxWidth: '400px', 
+                  padding: '1.5rem', 
+                  borderRadius: '10px', 
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'
+                }}>
+                  <p style={{ fontStyle: 'italic', fontSize: '1.1rem' }}>
+                    "{review.text}"
+                  </p>
+                  <p style={{ textAlign: 'right', fontWeight: 'bold' }}>— {review.author}</p>
+                </div>
+              ))}
             </div>
 
             {/* CTA Section */}
             <div style={{ margin: '3rem 0', textAlign: 'center' }}>
-              <h2>Ready to Secure Your Digital World?</h2>
+              <h2>{activeStashdogStrings.get_started.title}</h2>
+              <p>{activeStashdogStrings.get_started.description}</p>
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', margin: '2rem 0' }}>
                 <a 
                   href="#" 
                   className="cta-button"
-                  onClick={() => handleCTAClick('trial', 'Start Your Free Trial', 'footer_cta')}
+                  onClick={() => handleCTAClick('sign_up', activeStashdogStrings.get_started.call_to_action.sign_up, 'footer_cta')}
                 >
-                  Start Your Free Trial
+                  {activeStashdogStrings.get_started.call_to_action.sign_up}
                 </a>
                 <a 
                   href="#" 
                   className="cta-button"
-                  onClick={() => handleCTAClick('demo', 'Request a Demo', 'footer_cta')}
+                  onClick={() => handleCTAClick('learn_more', activeStashdogStrings.get_started.call_to_action.learn_more, 'footer_cta')}
                 >
-                  Request a Demo
-                </a>
-                <a 
-                  href="#" 
-                  className="cta-button"
-                  onClick={() => handleCTAClick('plans', 'Discover Our Plans', 'footer_cta')}
-                >
-                  Discover Our Plans
+                  {activeStashdogStrings.get_started.call_to_action.learn_more}
                 </a>
               </div>
               <div style={{ margin: '2rem 0' }}>
@@ -313,6 +270,7 @@ const StashdogPage: React.FC = () => {
         {/* Footer Section */}
         <footer className="footer">
           <div className="container">
+            <p>{activeStashdogStrings.thank_you}</p>
             <p>
               Contact us at:{" "}
               <a 
