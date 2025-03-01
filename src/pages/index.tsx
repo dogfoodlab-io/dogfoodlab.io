@@ -108,7 +108,7 @@ const IndexPage: React.FC = () => {
                 </div>
                 <div className="product-image-container">
                   <img
-                    src="/dog1.png"
+                    src="/lab1.png"
                     alt="StashDog"
                     className="product-image"
                   />
@@ -195,7 +195,7 @@ const IndexPage: React.FC = () => {
                 </div>
                 <div className="product-image-container">
                   <img
-                    src="/pup5.png"
+                    src="/butler-pup.png"
                     alt="Homeassistant"
                     className="product-image"
                   />

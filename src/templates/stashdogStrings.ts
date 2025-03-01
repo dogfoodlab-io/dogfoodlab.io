@@ -77,7 +77,7 @@ export const stashdogStrings = {
   get_started: {
     title: 'Quit Fucking Around and Get Organized!',
     description:
-      "You're a mess, and you know it. Stop pretending and start fixing your life. StashDog can turn your chaos into calm, even if you're a certified hot mess. Sign up, you clown.",
+      "You're a mess, and you know it. Stop pretending and start fixing your life. StashDog can turn your chaos into calm, even if you're a certified hot mess.",
     call_to_action: {
       sign_up: 'Ok I\'m in!',
       learn_more: 'Convince Me',
@@ -111,7 +111,7 @@ export const stashdogStrings = {
   about_us: {
     title: 'About Us',
     description:
-      'We\'re the geniuses who realized that most people suck at organizing. So we built StashDog to help you suck less. You\'re welcome.'
+      'We\'re the geniuses who realized that people suck at organizing. So we built StashDog to help your life suck less. You\'re welcome.'
   },
   thank_you: 'Thanks for checking out StashDog. Now go organize your life, you beautiful disaster.',
 };

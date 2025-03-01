@@ -91,7 +91,7 @@ const StashdogPage: React.FC = () => {
           <div className="container">
             <div style={{ display: 'flex', justifyContent: 'center', margin: '0rem 2rem'}}>
               <img
-                src="/dog1.png"
+                src="/lab1.png"
                 alt="StashDog"
                 style={{ maxWidth: '200px', height: 'auto' }}
               />
