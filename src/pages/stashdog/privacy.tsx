@@ -59,8 +59,8 @@ const StashdogPrivacyPage: React.FC = () => {
 
         {/* Privacy Policy Section */}
         <section className="products">
-          <div className="container">
-            <div className="product" style={{ maxWidth: '800px', margin: '2rem auto' }}>
+          <div className="container" style={{ display: 'flex', flexDirection: 'column' }}>
+            <div className="product" style={{ maxWidth: '800px', margin: '2rem auto', width: '100%' }}>
               <h1 style={{ textAlign: 'center', color: '#ffffff', marginBottom: '2rem' }}>STASHDOG PRIVACY POLICY</h1>
               <p style={{ textAlign: 'center', color: '#fcd900', marginBottom: '2rem' }}>Last Updated: March 18, 2025</p>
               
@@ -178,10 +178,9 @@ const StashdogPrivacyPage: React.FC = () => {
               <p style={{ color: '#ffffff' }}>
                 Email: <a href="mailto:mail@dogfoodlab.io" style={{ color: '#fcd900' }}>mail@dogfoodlab.io</a>
               </p>
-            </div>
-
-            {/* Navigation Buttons */}
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', margin: '2rem 0' }}>
+              
+              {/* Navigation Buttons */}
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', margin: '2rem 0' }}>
               <Link 
                 to="/stashdog" 
                 className="cta-button" 
@@ -198,6 +197,7 @@ const StashdogPrivacyPage: React.FC = () => {
               >
                 Back to Home
               </Link>
+              </div>
             </div>
           </div>
         </section>
