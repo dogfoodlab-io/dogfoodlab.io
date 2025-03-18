@@ -365,7 +365,7 @@ const StashdogPage: React.FC = () => {
             </p>
             <p>
               &copy; {new Date().getFullYear()} Dogfood Lab LLC. All rights
-              reserved.
+              reserved. <Link to="/stashdog/privacy" style={{ color: '#fcd900', marginLeft: '10px' }} onClick={() => logEvent('navigation', { destination: 'privacy', source: 'stashdog_footer' })}>Privacy Policy</Link>
             </p>
           </div>
         </footer>
