@@ -159,7 +159,7 @@ const StashdogPrivacyPage: React.FC = () => {
 
               <p style={{ color: '#ffffff' }}><strong>Sharing Permissions</strong>: You can modify or revoke sharing permissions for your personal belongings data through the App's permission settings.</p>
 
-              <p style={{ color: '#ffffff' }}><strong>Account Deletion</strong>: You may request deletion of your account by contacting us. Upon deletion, we will remove your personal information from our active databases, though some information may be retained in our archives for legal or legitimate business purposes.</p>
+              <p style={{ color: '#ffffff' }}><strong>Account Deletion</strong>: You can delete your account directly from the mobile app by going to Profile > Danger Zone > Delete Account. For detailed instructions, visit our <Link to="/stashdog/privacy/account-deletion" style={{ color: '#fcd900' }}>Account Deletion Guide</Link>. Upon deletion, we will remove your personal information from our active databases, though some information may be retained in our archives for legal or legitimate business purposes.</p>
 
               <h2 style={{ color: '#ffffff', marginTop: '2rem' }}>CHILDREN'S PRIVACY</h2>
               <p style={{ color: '#ffffff' }}>
