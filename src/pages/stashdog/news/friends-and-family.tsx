@@ -260,10 +260,10 @@ const FriendsAndFamilyPage: React.FC = () => {
                 </h2>
                 
                 <h3 style={{ fontSize: '1.3rem', color: '#ffffff', marginBottom: '1rem' }}>
-                  🆓 Forever Free Access
+                  🆓 Forever Free Access to Stashdog Plus
                 </h3>
                 <p style={{ marginBottom: '1rem', color: '#ffffff' }}>
-                  As a thank you for your help, you'll get permanent access to StashDog Pro features, even after we launch the paid tiers.
+                  As a thank you for your help, you'll get lifetime access to StashDog Plus features, even after we launch all of the paid tiers.
                 </p>
 
                 <h3 style={{ fontSize: '1.3rem', color: '#ffffff', marginBottom: '1rem', marginTop: '1.5rem' }}>
