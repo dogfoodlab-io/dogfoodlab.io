@@ -173,78 +173,6 @@ const FriendsAndFamilyPage: React.FC = () => {
                     fontWeight: 'bold'
                   }}>Google for your stuff</span> – a system that makes the invisible visible, the chaotic searchable, and the overwhelming manageable.
                 </p>
-                
-                <div style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-                  gap: '1rem',
-                  margin: '1.5rem 0'
-                }}>
-                  {[
-                    { icon: '📸', title: 'Smart Inventory', desc: 'Take a photo, add basic info, and let AI handle the rest. Your items become instantly searchable.' },
-                    { icon: '📍', title: 'Location Tracking', desc: 'Never lose track of where you put something. GPS or custom locations – your choice.' },
-                    { icon: '🔍', title: 'Natural Search', desc: 'Ask "where are my winter gloves?" and actually get an answer. No cryptic filing systems.' },
-                    { icon: '👨‍👩‍👧‍👦', title: 'Family Sharing', desc: 'Everyone in the household can find what they need without the "honey, where\'s the..." conversations.' }
-                  ].map((feature, index) => (
-                    <div key={index} style={{
-                      background: 'rgba(252, 217, 0, 0.1)',
-                      padding: '1.5rem',
-                      borderRadius: '10px',
-                      border: '1px solid rgba(252, 217, 0, 0.3)'
-                    }}>
-                      <div style={{
-                        color: '#fcd900',
-                        fontWeight: 'bold',
-                        marginBottom: '0.5rem'
-                      }}>
-                        {feature.icon} {feature.title}
-                      </div>
-                      <p style={{ color: '#ffffff', margin: 0 }}>{feature.desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Why This Matters */}
-              <div style={{ marginBottom: '3rem' }}>
-                <h2 style={{
-                  fontSize: '1.8rem',
-                  color: '#fcd900',
-                  marginBottom: '1rem'
-                }}>
-                  Why This Matters
-                </h2>
-                <p style={{ marginBottom: '1rem', color: '#ffffff' }}>
-                  This isn't about being perfectly organized (though that's nice). It's about <span style={{
-                    background: '#fcd900',
-                    color: '#333',
-                    padding: '0.2rem 0.4rem',
-                    borderRadius: '4px',
-                    fontWeight: 'bold'
-                  }}>reclaiming mental energy</span> you didn't know you were losing. Every minute spent hunting for something is time stolen from what actually matters.
-                </p>
-                
-                <h3 style={{
-                  fontSize: '1.3rem',
-                  color: '#ffffff',
-                  marginBottom: '1rem',
-                  marginTop: '1.5rem'
-                }}>
-                  Perfect For Life's Big Moments
-                </h3>
-                <ul style={{ marginLeft: '1.5rem', marginBottom: '1rem', color: '#ffffff' }}>
-                  {[
-                    { title: 'Moving:', desc: 'Know exactly what you have and where it should go' },
-                    { title: 'Merging Households:', desc: 'Combine belongings without the duplicate drama' },
-                    { title: 'Seasonal Storage:', desc: 'Find your holiday decorations in January, not December 23rd' },
-                    { title: 'Estate Management:', desc: 'Turn overwhelming inheritance into organized assets' },
-                    { title: 'Daily Life:', desc: 'Just find your stuff when you need it' }
-                  ].map((item, index) => (
-                    <li key={index} style={{ marginBottom: '0.5rem' }}>
-                      <strong>{item.title}</strong> {item.desc}
-                    </li>
-                  ))}
-                </ul>
               </div>
 
               {/* What We Need */}
@@ -253,7 +181,7 @@ const FriendsAndFamilyPage: React.FC = () => {
                 padding: '2rem',
                 background: 'rgba(76, 175, 80, 0.1)',
                 borderRadius: '15px',
-                border: '1px solid rgba(76, 175, 80, 0.3)'
+                borderLeft: '4px solid #4caf50'
               }}>
                 <h2 style={{
                   fontSize: '1.8rem',
@@ -321,7 +249,7 @@ const FriendsAndFamilyPage: React.FC = () => {
                 padding: '2rem',
                 background: 'rgba(33, 150, 243, 0.1)',
                 borderRadius: '15px',
-                border: '1px solid rgba(33, 150, 243, 0.3)'
+                borderLeft: '4px solid #2196f3'
               }}>
                 <h2 style={{
                   fontSize: '1.8rem',
@@ -366,7 +294,7 @@ const FriendsAndFamilyPage: React.FC = () => {
                 padding: '2rem',
                 background: 'rgba(156, 39, 176, 0.1)',
                 borderRadius: '15px',
-                border: '1px solid rgba(156, 39, 176, 0.3)'
+                borderLeft: '4px solid #9c27b0'
               }}>
                 <h2 style={{
                   fontSize: '1.8rem',
@@ -460,23 +388,23 @@ const FriendsAndFamilyPage: React.FC = () => {
                 
                 <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', margin: '2rem 0' }}>
                   <a 
-                    href="mailto:mail@dogfoodlab.io?subject=StashDog%20F%26F%20Beta%20-%20I'm%20In!" 
+                    href="mailto:mail@dogfoodlab.io?subject=StashDog%20Friends%20%26%20Family%20Beta%20-%20I'm%20In!" 
                     className="cta-button"
                     onClick={() => handleCTAClick('sign_up', 'I\'m In! Sign Me Up')}
                   >
                     I'm In! Sign Me Up
                   </a>
                   <a 
-                    href="mailto:mail@dogfoodlab.io?subject=StashDog%20F%26F%20Beta%20-%20Questions" 
+                    href="mailto:mail@dogfoodlab.io?subject=StashDog%20Friends%20%26%20Family%20Beta%20-%20Questions" 
                     className="cta-button"
-                    style={{ backgroundColor: 'transparent', border: '2px solid #fcd900' }}
+                    style={{ backgroundColor: 'transparent', color: '#fcd900', border: '2px solid #fcd900' }}
                     onClick={() => handleCTAClick('questions', 'I Have Questions')}
                   >
                     I Have Questions
                   </a>
                 </div>
                 
-                <p style={{ marginTop: '1.5rem', fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.7)' }}>
+                <p style={{ marginTop: '1.5rem', fontSize: '0.9rem', color: '#cccccc' }}>
                   Questions? Email us at <a href="mailto:mail@dogfoodlab.io" style={{ color: '#fcd900' }}>mail@dogfoodlab.io</a>
                 </p>
               </div>
@@ -487,7 +415,7 @@ const FriendsAndFamilyPage: React.FC = () => {
                 marginTop: '3rem',
                 padding: '2rem',
                 borderTop: '1px solid rgba(252, 217, 0, 0.3)',
-                color: 'rgba(255, 255, 255, 0.7)'
+                color: '#cccccc'
               }}>
                 <p style={{ marginBottom: '1rem' }}>
                   Thanks for being part of the StashDog family. Let's organize the world, one item at a time. 🐕✨
