@@ -52,6 +52,11 @@ export const stashdogStrings = {
         description:
           'Integrates with Alexa and Google Home, letting you ask your smart assistants about your stuff.'
       },
+      getting_started_chaos: {
+        title: 'Lost in Your Own Chaos? Start Here',
+        description:
+          'Drowning in a sea of random crap and have no clue where to even begin? StashDog starts by helping you photograph whatever the hell is in front of you. No fancy sorting required - just snap pics of your shit and let our AI figure out what goes where. Baby steps, disaster human.'
+      },
     },
   },
   why_choose: {

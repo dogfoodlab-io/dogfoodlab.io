@@ -115,6 +115,28 @@ const StashdogPage: React.FC = () => {
           <div className="container">
             <h2>{activeStashdogStrings.discover.title}</h2>
             
+            {/* Getting Started Chaos Section */}
+            <div className="product">
+              <div className="product-header">
+                <div className="product-info">
+                  <h3>{activeStashdogStrings.discover.features.getting_started_chaos.title}</h3>
+                </div>
+              </div>
+              <p className="description">
+                {activeStashdogStrings.discover.features.getting_started_chaos.description}
+              </p>
+              <a 
+                href="#" 
+                className="cta-button"
+                onClick={() => {
+                  handleFeatureClick('getting_started_chaos');
+                  handleCTAClick('getting_started', activeStashdogStrings.get_started.call_to_action.learn_more, 'feature_section');
+                }}
+              >
+                {activeStashdogStrings.get_started.call_to_action.learn_more}
+              </a>
+            </div>
+
             {/* Inventory Management Section */}
             <div className="product">
               <div className="product-header">

@@ -119,7 +119,7 @@ const IndexPage: React.FC = () => {
               </p>
               {/* A/B test for button color */}
               <a 
-                href="/stashdog" 
+                href="https://stashdog.io" 
                 className="cta-button"
                 style={{ backgroundColor: buttonColor }}
                 onClick={() => handleCTAClick('stashdog', 'Learn More', 'product_card')}
