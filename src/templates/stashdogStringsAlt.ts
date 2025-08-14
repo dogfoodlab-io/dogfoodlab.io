@@ -43,7 +43,7 @@ export const stashdogStringsAlt = {
           'Seamlessly integrates with Alexa and Google Home, allowing you to access your inventory information through simple voice commands.'
       },
       getting_started_chaos: {
-        title: 'Overwhelmed? We'll Guide You Through',
+        title: 'Overwhelmed? We\'ll Guide You Through',
         description:
           'Feeling overwhelmed by clutter and not sure where to start? StashDog makes getting started simple - just begin photographing items around you. Our intelligent system will help organize and categorize everything automatically, giving you a clear path forward.'
       },
