@@ -100,7 +100,7 @@ const IndexPage: React.FC = () => {
             <h2 className="products-title">Our Pack of Helpers</h2>
             <div className="products-grid">
               
-              <div className="product card-yellow">
+              <div className="product card-purple">
                 <div className="product-header">
                   <div className="product-info">
                     <h3>StashDog</h3>
@@ -123,10 +123,11 @@ const IndexPage: React.FC = () => {
                 <a 
                   href="https://stashdog.io" 
                   className="cta-button b-primary"
-                  style={{ backgroundColor: buttonColor !== '#4285F4' ? buttonColor : '#ff00ff' }}
+                  style={{ backgroundColor: buttonColor !== '#4285F4' ? buttonColor : '#00ff00' }}
                   onClick={() => handleCTAClick('stashdog', 'Learn More', 'product_card')}
                 >
-                  Learn More
+
+                  Get Organized
                 </a>
               </div>
 
@@ -149,12 +150,13 @@ const IndexPage: React.FC = () => {
                 <p className="description">
                   Turn every scene into a conversation – comment in sync on your favorite movies and TV shows, no matter when, where, or which of the 200 streaming services you're watching on.
                 </p>
-                <button 
-                  className="cta-button disabled" 
-                  onClick={() => handleCTAClick('watchdog', 'Not Ready for Human Consumption', 'product_card')}
+                <a 
+                  href="https://watchparty-flax.vercel.app/#"
+                  className="cta-button b-primary" 
+                  onClick={() => handleCTAClick('watchdog', 'Open Watchparty', 'product_card')}
                 >
-                  Not Ready for Human Consumption 🚧
-                </button>
+                  Start Watching
+                </a>
               </div>
 
               {/* Feature flag for new UI */}
