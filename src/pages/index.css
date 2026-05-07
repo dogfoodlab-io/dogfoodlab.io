@@ -169,6 +169,11 @@ h4,
   background-color: #ff8c00;
 }
 
+.card-red {
+  background-color: #ff2a2a;
+  color: #fff;
+}
+
 .product-header {
   display: flex;
   justify-content: space-between;

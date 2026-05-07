@@ -131,6 +131,32 @@ const IndexPage: React.FC = () => {
                 </a>
               </div>
 
+              <div className="product card-green">
+                <div className="product-header">
+                  <div className="product-info">
+                    <h3>Housedog</h3>
+                    <p className="tagline">Luxury tech for everyday homes.</p>
+                  </div>
+                  <div className="product-image-container">
+                    <img
+                      src="/butler-pup.png"
+                      alt="Homeassistant"
+                      className="product-image"
+                    />
+                  </div>
+                </div>
+                <p className="description">
+                  AI-enhaced tools to turn your sad, boring apartment that smells like BO and cat piss into a futuristic luxury smarthome that smells like BO and cat piss.
+                </p>
+                <button 
+                  className="cta-button disabled" 
+                  onClick={() => handleCTAClick('housedog', 'Not Ready for Human Consumption', 'product_card')}
+                >
+                  Not Ready for Human Consumption 🚧
+                </button>
+              </div>
+
+
               <div className="product card-blue">
                 <div className="product-header">
                   <div className="product-info">
@@ -189,29 +215,32 @@ const IndexPage: React.FC = () => {
                 </div>
               )}
 
-              <div className="product card-green">
+              <div className="product card-red">
                 <div className="product-header">
                   <div className="product-info">
-                    <h3>Housedog</h3>
-                    <p className="tagline">Luxury tech for everyday homes.</p>
+                    <h3>Dogtown</h3>
+                    <p className="tagline">
+                      Never launch to an empty room.
+                    </p>
                   </div>
                   <div className="product-image-container">
                     <img
-                      src="/butler-pup.png"
-                      alt="Homeassistant"
+                      src="/dog-world.png"
+                      alt="Dogtown"
                       className="product-image"
                     />
                   </div>
                 </div>
                 <p className="description">
-                  AI-enhaced tools to turn your sad, boring apartment that smells like BO and cat piss into a futuristic luxury smarthome that smells like BO and cat piss.
+                  Nobody wants to be the first person at a party, and nobody wants to join your "ghost town" platform. Beat the cold-start problem and make your community look alive before the real humans arrive to ruin it.
                 </p>
-                <button 
-                  className="cta-button disabled" 
-                  onClick={() => handleCTAClick('housedog', 'Not Ready for Human Consumption', 'product_card')}
+                <a 
+                  href="https://simpop.vercel.app/#"
+                  className="cta-button b-primary" 
+                  onClick={() => handleCTAClick('watchdog', 'Open Watchparty', 'product_card')}
                 >
-                  Not Ready for Human Consumption 🚧
-                </button>
+                  Come Hang Out
+                </a>
               </div>
 
               <div className="product card-orange">
@@ -238,6 +267,7 @@ const IndexPage: React.FC = () => {
                   Not Ready for Human Consumption 🚧
                 </button>
               </div>
+
 
             </div>
           </div>
